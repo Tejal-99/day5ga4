@@ -119,4 +119,127 @@
         .testimonial-card {
             background: #fff;
             padding: 2rem;
-            border-radius: 8
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: 0 auto 1.5rem auto;
+            font-style: italic;
+            color: #666;
+            text-align: left;
+        }
+
+        .testimonial-card p:last-child {
+            font-weight: bold;
+            text-align: right;
+            margin-top: 1rem;
+            color: #333;
+        }
+
+        /* Call to Action Bottom */
+        .bottom-cta {
+            background: #34495e;
+            color: #fff;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .bottom-cta h2 {
+            font-size: 2.2em;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+            font-size: 0.9em;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.2em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .feature-item {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>LearnFast</h1>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Unlock Your Potential with LearnFast</h2>
+                <p>LearnFast is your ultimate platform to acquire new skills rapidly and efficiently. Whether you're looking to boost your career, explore new hobbies, or simply expand your knowledge, we've got you covered.</p>
+                <a href="#signup" class="cta-button">Start Learning Today!</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-item">
+                <h3>Personalized Learning Paths</h3>
+                <p>Our intelligent algorithms adapt to your learning style, providing customized content and exercises to maximize retention and speed.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Expert-Led Courses</h3>
+                <p>Access a vast library of courses taught by industry leaders and experienced educators, ensuring you get the most up-to-date and relevant information.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Interactive & Engaging Content</h3>
+                <p>Say goodbye to boring lectures. Our platform features quizzes, interactive simulations, and real-world projects to keep you engaged and motivated.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Track Your Progress</h3>
+                <p>Monitor your learning journey with intuitive dashboards, celebrate milestones, and identify areas for improvement to stay on track.</p>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>What Our Learners Say</h2>
+            <div class="testimonial-card">
+                <p>"LearnFast helped me master web development in just a few weeks! The personalized path made a huge difference."</p>
+                <p>- Jane Doe, Aspiring Developer</p>
+            </div>
+            <div class="testimonial-card">
+                <p>"I never thought learning could be this engaging. LearnFast's interactive content is a game-changer."</p>
+                <p>- John Smith, Business Professional</p>
+            </div>
+        </section>
+
+        <section class="bottom-cta" id="signup">
+            <h2>Ready to Accelerate Your Learning?</h2>
+            <p>Join thousands of successful learners who are achieving their goals with LearnFast.</p>
+            <a href="#" class="cta-button">Sign Up for Free!</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 LearnFast. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
