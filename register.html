@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LearnFast - Application/Registration Form</title>
+    <title>LearnFast - Registration Form</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -59,7 +59,7 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             font-size: 1em;
-            box-sizing: border-box; /* Ensures padding doesn't add to the width */
+            box-sizing: border-box;
         }
 
         .form-group input[type="radio"],
@@ -115,4 +115,83 @@
                 padding: 30px;
             }
             h2 {
-                font-size: 1.8
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Register for LearnFast</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full_name" placeholder="John Doe" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number (Optional)</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g., +91 9876543210">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Min. 8 characters" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm_password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country/Region</label>
+                <select id="country" name="country" required>
+                    <option value="">Select your country</option>
+                    <option value="india">India</option>
+                    <option value="usa">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="canada">Canada</option>
+                    <option value="australia">Australia</option>
+                    <option value="germany">Germany</option>
+                    <option value="france">France</option>
+                    <option value="japan">Japan</option>
+                    <option value="brazil">Brazil</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Preferred Learning Level</label>
+                <div class="radio-group">
+                    <input type="radio" id="beginner" name="learning_level" value="beginner" checked>
+                    <label for="beginner">Beginner</label>
+                    <input type="radio" id="intermediate" name="learning_level" value="intermediate">
+                    <label for="intermediate">Intermediate</label>
+                    <input type="radio" id="advanced" name="learning_level" value="advanced">
+                    <label for="advanced">Advanced</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="interests">Areas of Interest (Optional)</label>
+                <textarea id="interests" name="interests" rows="4" placeholder="e.g., Web Development, Data Science, Digital Marketing"></textarea>
+            </div>
+
+            <div class="terms-checkbox">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="#" target="_blank">Terms of Service</a> and <a href="#" target="_blank">Privacy Policy</a>.</label>
+            </div>
+
+            <button type="submit" class="submit-button">Register Now</button>
+        </form>
+    </div>
+
+</body>
+</html>
