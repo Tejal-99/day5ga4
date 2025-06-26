@@ -3,60 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LearnFast - Your Online Education Partner</title>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G76E2X497W"></script>
+    <title>LearnFast - Accelerate Your Learning Journey</title>
+    <!-- Tailwind CSS CDN for modern styling and responsiveness -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter for a clean look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Light gray background */
+            color: #333;
+        }
+    </style>
+    <!-- Google tag (gtag.js) - IMPORTANT: Replace G-XXXXXXXXXX with your actual GA4 Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-G76E2X497W');
+
+      gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <style>
-        /* Basic styling from course.html, add as needed */
-        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f4f4f4; color: #333; }
-        .container { max-width: 900px; margin: auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
-        .nav-link { margin-right: 15px; text-decoration: none; color: #0056b3; }
-        .nav-link:hover { text-decoration: underline; }
-        .cta-button {
-            display: inline-block;
-            background-color: #28a745;
-            color: #fff;
-            padding: 12px 25px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 1.1em;
-            margin-top: 20px;
-            transition: background-color 0.3s ease;
-        }
-        .cta-button:hover { background-color: #218838; }
-    </style>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <nav>
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="course.html" class="nav-link">Our Courses</a>
-                <a href="about.html" class="nav-link">About Us</a>
-                <a href="register.html" class="nav-link">Register</a>
+<body class="min-h-screen flex flex-col">
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <div class="flex items-center mb-4 sm:mb-0">
+                <a href="index.html" class="text-3xl font-bold tracking-tight">LearnFast</a>
+            </div>
+            <!-- Navigation Links -->
+            <nav class="space-x-4 sm:space-x-6 text-lg">
+                <a href="index.html" class="nav-link hover:text-blue-200 transition-colors duration-200">Home</a>
+                <a href="course.html" class="nav-link hover:text-blue-200 transition-colors duration-200">Courses</a>
+                <a href="about.html" class="nav-link hover:text-blue-200 transition-colors duration-200">About Us</a>
+                <a href="register.html" class="nav-link bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-300 transition-colors duration-200 shadow-md">Register</a>
             </nav>
-        </header>
+        </div>
+    </header>
 
-        <h1>Welcome to LearnFast!</h1>
-        <p>Your journey to skill mastery begins here. We offer cutting-edge online courses designed to accelerate your career.</p>
+    <!-- Main Content Section -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <section class="bg-white shadow-lg rounded-xl p-8 mb-8 text-center">
+            <h1 class="text-5xl font-extrabold text-gray-900 mb-6 leading-tight">Accelerate Your Future with LearnFast</h1>
+            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Unlock new skills, advance your career, and achieve your goals with our expert-led online courses.
+            </p>
+            <a href="course.html" class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-xl font-bold shadow-lg transition-colors duration-300 transform hover:scale-105">
+                Explore Our Courses
+            </a>
+        </section>
 
-        <h2>Featured Course: Data Analytics Masterclass</h2>
-        <p>Dive deep into the world of data with our most popular course. Learn everything from Excel to Python and SQL.</p>
-        <p><a href="course.html" class="cta-button">Learn More About the Course</a></p>
+        <section class="bg-white shadow-lg rounded-xl p-8">
+            <h2 class="text-4xl font-bold text-gray-800 mb-6 text-center">Featured Course: Data Analytics Masterclass</h2>
+            <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <img src="https://placehold.co/600x400/D0E0F0/0056b3?text=Data+Analytics+Course" alt="Data Analytics Course Illustration" class="rounded-lg shadow-md w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-lg text-gray-700 mb-4">
+                        Dive deep into the world of data with our comprehensive Masterclass. Learn essential skills in data collection, analysis, and interpretation using tools like Excel, SQL, Tableau, and Python.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 mb-6 space-y-2">
+                        <li>Hands-on projects and real-world case studies</li>
+                        <li>Expert instructors with industry experience</li>
+                        <li>Flexible online learning, learn at your own pace</li>
+                        <li>Recognized certification upon completion</li>
+                    </ul>
+                    <a href="course.html" class="cta-button-small bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md transition-colors duration-300">
+                        View Course Details
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        <p>Ready to get started?</p>
-        <p><a href="register.html" class="cta-button">Register Now!</a></p>
-
-        <p>Curious about us? <a href="about.html">Find out more.</a></p>
-
-        <footer>
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-6 mt-8">
+        <div class="max-w-6xl mx-auto px-4 text-center text-gray-400 text-sm">
             <p>&copy; 2025 LearnFast. All rights reserved.</p>
-        </footer>
-    </div>
+            <p class="mt-2">
+                <a href="about.html" class="hover:underline">Contact Us</a> |
+                <a href="#" class="hover:underline">Privacy Policy</a>
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
