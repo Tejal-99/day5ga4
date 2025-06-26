@@ -3,75 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register for Data Analytics Course - LearnFast</title>
+    <title>Register for Data Analytics - LearnFast</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+    </style>
+    <!-- Google tag (gtag.js) - IMPORTANT: Replace G-XXXXXXXXXX with your actual GA4 Measurement ID -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+
       gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <style>
-        /* Basic styling */
-        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f4f4f4; color: #333; }
-        .container { max-width: 600px; margin: auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
-        .nav-link { margin-right: 15px; text-decoration: none; color: #0056b3; }
-        .nav-link:hover { text-decoration: underline; }
-        form { margin-top: 20px; }
-        label { display: block; margin-bottom: 5px; font-weight: bold; }
-        input[type="text"], input[type="email"], textarea {
-            width: calc(100% - 22px); /* Account for padding and border */
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        input[type="submit"] {
-            background-color: #007bff;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.1em;
-            transition: background-color 0.3s ease;
-        }
-        input[type="submit"]:hover { background-color: #0056b3; }
-    </style>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <nav>
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="course.html" class="nav-link">Our Courses</a>
-                <a href="about.html" class="nav-link">About Us</a>
-                <a href="register.html" class="nav-link">Register</a>
+<body class="min-h-screen flex flex-col">
+    <!-- Header Section (consistent across pages) -->
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <div class="flex items-center mb-4 sm:mb-0">
+                <a href="index.html" class="text-3xl font-bold tracking-tight">LearnFast</a>
+            </div>
+            <nav class="space-x-4 sm:space-x-6 text-lg">
+                <a href="index.html" class="nav-link hover:text-blue-200 transition-colors duration-200">Home</a>
+                <a href="course.html" class="nav-link hover:text-blue-200 transition-colors duration-200">Courses</a>
+                <a href="about.html" class="nav-link hover:text-blue-200 transition-colors duration-200">About Us</a>
+                <a href="register.html" class="nav-link font-bold text-yellow-300">Register</a>
             </nav>
-        </header>
+        </div>
+    </header>
 
-        <h1>Register for the Data Analytics Masterclass</h1>
-        <p>Please fill out the form below to register for the course.</p>
+    <!-- Main Content Section -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="bg-white shadow-lg rounded-xl p-8 max-w-2xl mx-auto">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-6 text-center">Complete Your Registration</h1>
+            <p class="text-lg text-gray-600 mb-8 text-center">
+                Please fill out the form below to enroll in the Data Analytics Masterclass.
+            </p>
 
-        <form action="confirmation.html" method="get">
-            <label for="fullName">Full Name:</label>
-            <input type="text" id="fullName" name="fullName" required>
+            <!-- Form section -->
+            <!-- IMPORTANT: For this simulation, the form action points directly to confirmation.html.
+                 In a real application, this would be a server-side endpoint. -->
+            <form action="confirmation.html" method="get" class="space-y-6">
+                <div>
+                    <label for="fullName" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required
+                           class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200">
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" required
+                           class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200">
+                </div>
+                <div>
+                    <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" name="phone"
+                           class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200">
+                </div>
+                <div>
+                    <label for="country" class="block text-gray-700 text-sm font-bold mb-2">Country</label>
+                    <select id="country" name="country" required
+                            class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200">
+                        <option value="">Select your country</option>
+                        <option value="usa">United States</option>
+                        <option value="canada">Canada</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="australia">Australia</option>
+                        <option value="india">India</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="motivation" class="block text-gray-700 text-sm font-bold mb-2">Why are you interested in this course?</label>
+                    <textarea id="motivation" name="motivation" rows="4"
+                              class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"></textarea>
+                </div>
 
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
+                <div class="flex items-center">
+                    <input type="checkbox" id="terms" name="terms" required class="form-checkbox h-5 w-5 text-blue-600 rounded">
+                    <label for="terms" class="ml-2 text-gray-700 text-sm">I agree to the <a href="#" class="text-blue-600 hover:underline">Terms and Conditions</a></label>
+                </div>
 
-            <label for="phone">Phone Number (Optional):</label>
-            <input type="text" id="phone" name="phone">
+                <div class="text-center">
+                    <input type="submit" value="Complete Registration"
+                           class="cta-button bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-xl font-bold shadow-lg cursor-pointer transition-colors duration-300 transform hover:scale-105">
+                </div>
+            </form>
+        </div>
+    </main>
 
-            <label for="motivation">Why do you want to join this course?</label>
-            <textarea id="motivation" name="motivation" rows="4"></textarea>
-
-            <input type="submit" value="Complete Registration">
-        </form>
-
-        <footer>
+    <!-- Footer Section (consistent across pages) -->
+    <footer class="bg-gray-800 text-white py-6 mt-8">
+        <div class="max-w-6xl mx-auto px-4 text-center text-gray-400 text-sm">
             <p>&copy; 2025 LearnFast. All rights reserved.</p>
-        </footer>
-    </div>
+            <p class="mt-2">
+                <a href="about.html" class="hover:underline">Contact Us</a> |
+                <a href="#" class="hover:underline">Privacy Policy</a>
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
