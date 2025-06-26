@@ -3,230 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LearnFast - About Us & Contact</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>About Us - LearnFast</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Basic Reset & Body Styles */
         body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
             color: #333;
-            background-color: #f4f7fa;
-        }
-
-        /* Header */
-        header {
-            background: #2c3e50;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        /* Main Content Container */
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        /* Section Styles */
-        section {
-            background: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-bottom: 40px;
-        }
-
-        section h2 {
-            text-align: center;
-            color: #2c3e50;
-            font-size: 2.5em;
-            margin-bottom: 30px;
-        }
-
-        section p {
-            font-size: 1.1em;
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-
-        /* Contact Form Specific Styles */
-        .contact-form .form-group {
-            margin-bottom: 20px;
-        }
-
-        .contact-form .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #555;
-        }
-
-        .contact-form .form-group input[type="text"],
-        .contact-form .form-group input[type="email"],
-        .contact-form .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1em;
-            box-sizing: border-box; /* Ensures padding doesn't add to the width */
-        }
-
-        .contact-form .form-group textarea {
-            resize: vertical; /* Allows vertical resizing of textarea */
-            min-height: 120px;
-        }
-
-        .contact-form .submit-button {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            background: #4a90e2;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .contact-form .submit-button:hover {
-            background: #357bd8;
-        }
-
-        /* Contact Information */
-        .contact-info {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .contact-info p {
-            font-size: 1.1em;
-            margin-bottom: 10px;
-            color: #444;
-        }
-
-        .contact-info a {
-            color: #4a90e2;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contact-info a:hover {
-            color: #357bd8;
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        footer {
-            background: #2c3e50;
-            color: #fff;
-            text-align: center;
-            padding: 1.5rem 0;
-            font-size: 0.9em;
-            margin-top: 40px; /* Space between last section and footer */
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-
-            .container {
-                margin: 20px auto;
-                padding: 0 15px;
-            }
-
-            section {
-                padding: 30px;
-            }
-
-            section h2 {
-                font-size: 2em;
-                margin-bottom: 20px;
-            }
-
-            section p {
-                font-size: 1em;
-            }
-
-            .contact-form .submit-button {
-                font-size: 1.1em;
-            }
         }
     </style>
-</head>
-<body>
+    <!-- Google tag (gtag.js) - IMPORTANT: Replace G-XXXXXXXXXX with your actual GA4 Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    <header>
-        <h1>LearnFast</h1>
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Header Section (consistent across pages) -->
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <div class="flex items-center mb-4 sm:mb-0">
+                <a href="index.html" class="text-3xl font-bold tracking-tight">LearnFast</a>
+            </div>
+            <nav class="space-x-4 sm:space-x-6 text-lg">
+                <a href="index.html" class="nav-link hover:text-blue-200 transition-colors duration-200">Home</a>
+                <a href="course.html" class="nav-link hover:text-blue-200 transition-colors duration-200">Courses</a>
+                <a href="about.html" class="nav-link font-bold text-yellow-300">About Us</a>
+                <a href="register.html" class="nav-link bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-300 transition-colors duration-200 shadow-md">Register</a>
+            </nav>
+        </div>
     </header>
 
-    <main class="container">
-        <section class="about-us">
-            <h2>About LearnFast</h2>
-            <p>
-                At LearnFast, our mission is to empower individuals worldwide to achieve their full potential through accessible, high-quality, and personalized education. We believe that learning should be an engaging and efficient process, enabling anyone to master new skills and knowledge at their own pace.
+    <!-- Main Content Section -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="bg-white shadow-lg rounded-xl p-8">
+            <h1 class="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 text-center">About LearnFast</h1>
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                Welcome to LearnFast, where we believe in accelerating your learning journey. Our platform is dedicated to providing high-quality, practical online courses designed to equip you with the in-demand skills necessary to thrive in today's dynamic professional landscape.
             </p>
-            <p>
-                Founded in 2023, LearnFast was born from the idea that traditional learning models often fall short in today's fast-paced world. We leverage cutting-edge technology, including AI-driven adaptive learning paths and interactive content, to create an unparalleled educational experience. Our comprehensive library of courses spans a wide range of subjects, from technology and business to arts and personal development.
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                Founded in 2023, LearnFast was born from a passion for accessible education and a commitment to bridging the gap between industry needs and individual skills. We partner with seasoned experts and thought leaders to bring you cutting-edge content, hands-on projects, and real-world case studies.
             </p>
-            <p>
-                We are committed to continuous improvement, constantly updating our course content and platform features based on learner feedback and the latest educational research. Join the LearnFast community and discover a smarter, faster way to learn.
+
+            <h2 class="text-3xl font-bold text-gray-800 mb-4 mt-8">Our Mission</h2>
+            <p class="text-lg text-gray-700 mb-6">
+                To empower a global community of learners by providing flexible, affordable, and highly effective online courses that lead to tangible career growth and personal development.
             </p>
-        </section>
 
-        <section class="contact-us">
-            <h2>Contact Us</h2>
-            <p>Have questions, feedback, or need support? We'd love to hear from you! Please fill out the form below or reach out to us directly.</p>
+            <h2 class="text-3xl font-bold text-gray-800 mb-4 mt-8">Why Choose LearnFast?</h2>
+            <ul class="list-disc list-inside text-gray-700 mb-6 space-y-2">
+                <li><strong>Expert-Led Instruction:</strong> Learn directly from industry professionals.</li>
+                <li><strong>Practical & Project-Based:</strong> Apply concepts to real-world scenarios.</li>
+                <li><strong>Flexible Learning:</strong> Study at your own pace, on your own schedule.</li>
+                <li><strong>Community Support:</strong> Connect with fellow learners and instructors.</li>
+                <li><strong>Certification:</strong> Gain recognized credentials to boost your resume.</li>
+            </ul>
 
-            <form action="#" method="POST" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                </div>
+            <h2 class="text-3xl font-bold text-gray-800 mb-4 mt-8">Contact Us</h2>
+            <p class="text-lg text-gray-700 mb-2">Have questions or need assistance? We're here to help!</p>
+            <ul class="list-none text-gray-700 mb-6 space-y-2">
+                <li><span class="font-semibold">Email:</span> <a href="mailto:support@learnfast.com" class="text-blue-600 hover:underline">support@learnfast.com</a></li>
+                <li><span class="font-semibold">Phone:</span> +1 (800) 555-LEARN (53276)</li>
+                <li><span class="font-semibold">Address:</span> 456 Knowledge Blvd, Suite 100, Innovate City, IL 60601, USA</li>
+            </ul>
 
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="name@example.com" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="e.g., Course Inquiry, Technical Support" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
-                </div>
-
-                <button type="submit" class="submit-button">Send Message</button>
-            </form>
-
-            <div class="contact-info">
-                <p><strong>Alternatively, you can reach us at:</strong></p>
-                <p>Email: <a href="mailto:support@learnfast.com">support@learnfast.com</a></p>
-                <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-                <p>Address: 123 Learning Lane, Knowledge City, LC 98765</p>
+            <div class="text-center mt-10">
+                <a href="course.html" class="cta-button bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full text-xl font-bold shadow-lg transition-colors duration-300 transform hover:scale-105">
+                    View All Courses
+                </a>
             </div>
-        </section>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2025 LearnFast. All rights reserved.</p>
+    <!-- Footer Section (consistent across pages) -->
+    <footer class="bg-gray-800 text-white py-6 mt-8">
+        <div class="max-w-6xl mx-auto px-4 text-center text-gray-400 text-sm">
+            <p>&copy; 2025 LearnFast. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="about.html" class="hover:underline">Contact Us</a> |
+                <a href="#" class="hover:underline">Privacy Policy</a>
+            </p>
+        </div>
     </footer>
-
 </body>
 </html>
