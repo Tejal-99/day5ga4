@@ -3,243 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LearnFast - Accelerate Your Learning</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>LearnFast - Your Online Education Partner</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G76E2X497W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-G76E2X497W');
+    </script>
     <style>
-        /* Basic Reset & Body Styles */
-        body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f7fa;
-        }
-
-        /* Header */
-        header {
-            background: #2c3e50;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(to right, #4a90e2, #63b8ff);
-            color: #fff;
-            padding: 4rem 0;
-            text-align: center;
-            animation: fadeIn 1.5s ease-out;
-        }
-
-        .hero h2 {
-            font-size: 3em;
-            margin-bottom: 0.5rem;
-        }
-
-        .hero p {
-            font-size: 1.2em;
-            margin-bottom: 2rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
+        /* Basic styling from course.html, add as needed */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f4f4f4; color: #333; }
+        .container { max-width: 900px; margin: auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        .nav-link { margin-right: 15px; text-decoration: none; color: #0056b3; }
+        .nav-link:hover { text-decoration: underline; }
         .cta-button {
             display: inline-block;
-            background: #f39c12;
+            background-color: #28a745;
             color: #fff;
-            padding: 1rem 2rem;
+            padding: 12px 25px;
             border-radius: 5px;
             text-decoration: none;
-            font-weight: bold;
             font-size: 1.1em;
-            transition: background 0.3s ease;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
         }
-
-        .cta-button:hover {
-            background: #e67e22;
-        }
-
-        /* Features Section */
-        .features {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 3rem 1rem;
-            gap: 2rem;
-        }
-
-        .feature-item {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            text-align: center;
-            flex: 1;
-            min-width: 280px;
-            max-width: 350px;
-            transition: transform 0.3s ease;
-        }
-
-        .feature-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-item h3 {
-            color: #4a90e2;
-            font-size: 1.8em;
-            margin-bottom: 1rem;
-        }
-
-        .feature-item p {
-            font-size: 1em;
-            color: #555;
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            background: #e9eff5;
-            padding: 4rem 1rem;
-            text-align: center;
-        }
-
-        .testimonials h2 {
-            font-size: 2.5em;
-            color: #2c3e50;
-            margin-bottom: 2rem;
-        }
-
-        .testimonial-card {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            max-width: 700px;
-            margin: 0 auto 1.5rem auto;
-            font-style: italic;
-            color: #666;
-            text-align: left;
-        }
-
-        .testimonial-card p:last-child {
-            font-weight: bold;
-            text-align: right;
-            margin-top: 1rem;
-            color: #333;
-        }
-
-        /* Call to Action Bottom */
-        .bottom-cta {
-            background: #34495e;
-            color: #fff;
-            padding: 3rem 0;
-            text-align: center;
-        }
-
-        .bottom-cta h2 {
-            font-size: 2.2em;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Footer */
-        footer {
-            background: #2c3e50;
-            color: #fff;
-            text-align: center;
-            padding: 1.5rem 0;
-            font-size: 0.9em;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero h2 {
-                font-size: 2.2em;
-            }
-
-            .hero p {
-                font-size: 1em;
-            }
-
-            .features {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .feature-item {
-                max-width: 90%;
-            }
-        }
+        .cta-button:hover { background-color: #218838; }
     </style>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="course.html" class="nav-link">Our Courses</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="register.html" class="nav-link">Register</a>
+            </nav>
+        </header>
 
-    <header>
-        <h1>LearnFast</h1>
-    </header>
+        <h1>Welcome to LearnFast!</h1>
+        <p>Your journey to skill mastery begins here. We offer cutting-edge online courses designed to accelerate your career.</p>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h2>Unlock Your Potential with LearnFast</h2>
-                <p>LearnFast is your ultimate platform to acquire new skills rapidly and efficiently. Whether you're looking to boost your career, explore new hobbies, or simply expand your knowledge, we've got you covered.</p>
-                <a href="#signup" class="cta-button">Start Learning Today!</a>
-            </div>
-        </section>
+        <h2>Featured Course: Data Analytics Masterclass</h2>
+        <p>Dive deep into the world of data with our most popular course. Learn everything from Excel to Python and SQL.</p>
+        <p><a href="course.html" class="cta-button">Learn More About the Course</a></p>
 
-        <section class="features">
-            <div class="feature-item">
-                <h3>Personalized Learning Paths</h3>
-                <p>Our intelligent algorithms adapt to your learning style, providing customized content and exercises to maximize retention and speed.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Expert-Led Courses</h3>
-                <p>Access a vast library of courses taught by industry leaders and experienced educators, ensuring you get the most up-to-date and relevant information.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Interactive & Engaging Content</h3>
-                <p>Say goodbye to boring lectures. Our platform features quizzes, interactive simulations, and real-world projects to keep you engaged and motivated.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Track Your Progress</h3>
-                <p>Monitor your learning journey with intuitive dashboards, celebrate milestones, and identify areas for improvement to stay on track.</p>
-            </div>
-        </section>
+        <p>Ready to get started?</p>
+        <p><a href="register.html" class="cta-button">Register Now!</a></p>
 
-        <section class="testimonials">
-            <h2>What Our Learners Say</h2>
-            <div class="testimonial-card">
-                <p>"LearnFast helped me master web development in just a few weeks! The personalized path made a huge difference."</p>
-                <p>- Jane Doe, Aspiring Developer</p>
-            </div>
-            <div class="testimonial-card">
-                <p>"I never thought learning could be this engaging. LearnFast's interactive content is a game-changer."</p>
-                <p>- John Smith, Business Professional</p>
-            </div>
-        </section>
+        <p>Curious about us? <a href="about.html">Find out more.</a></p>
 
-        <section class="bottom-cta" id="signup">
-            <h2>Ready to Accelerate Your Learning?</h2>
-            <p>Join thousands of successful learners who are achieving their goals with LearnFast.</p>
-            <a href="#" class="cta-button">Sign Up for Free!</a>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 LearnFast. All rights reserved.</p>
-    </footer>
-
+        <footer>
+            <p>&copy; 2025 LearnFast. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
