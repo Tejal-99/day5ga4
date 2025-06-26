@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics Masterclass - LearnFast</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+    </style>
+    <!-- Google tag (gtag.js) - IMPORTANT: Replace G-XXXXXXXXXX with your actual GA4 Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Header Section (consistent across pages) -->
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <div class="flex items-center mb-4 sm:mb-0">
+                <a href="index.html" class="text-3xl font-bold tracking-tight">LearnFast</a>
+            </div>
+            <nav class="space-x-4 sm:space-x-6 text-lg">
+                <a href="index.html" class="nav-link hover:text-blue-200 transition-colors duration-200">Home</a>
+                <a href="course.html" class="nav-link font-bold text-yellow-300">Courses</a>
+                <a href="about.html" class="nav-link hover:text-blue-200 transition-colors duration-200">About Us</a>
+                <a href="register.html" class="nav-link bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-300 transition-colors duration-200 shadow-md">Register</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="bg-white shadow-lg rounded-xl p-8">
+            <h1 class="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 text-center">Data Analytics Masterclass</h1>
+            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto text-center">
+                Transform raw data into actionable insights and drive business success.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Course Overview</h2>
+                    <p class="text-lg text-gray-700 mb-4">
+                        This comprehensive masterclass is designed for anyone looking to build a strong foundation in data analytics. From fundamental concepts to advanced techniques, you'll gain practical skills to analyze data, create compelling visualizations, and make data-driven decisions.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+                        <li><strong>Duration:</strong> 12 Weeks (Self-paced online)</li>
+                        <li><strong>Level:</strong> Beginner to Intermediate</li>
+                        <li><strong>Prerequisites:</strong> None! Just a desire to learn.</li>
+                        <li><strong>Certification:</strong> LearnFast Professional Certificate</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">What You Will Learn</h2>
+                    <ul class="list-disc list-inside text-gray-700 mb-4 space-y-2">
+                        <li>Foundations of Data Analytics and Statistics</li>
+                        <li>Advanced Excel for Data Manipulation and Reporting</li>
+                        <li>SQL for Database Querying and Management</li>
+                        <li>Data Visualization with Tableau and Power BI</li>
+                        <li>Introduction to Python for Data Science (Pandas, NumPy, Matplotlib)</li>
+                        <li>Building Dashboards and Creating Reports</li>
+                        <li>Real-World Case Studies and Capstone Projects</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 p-6 rounded-lg mb-8">
+                <h3 class="text-2xl font-bold text-blue-800 mb-4">Meet Your Instructor</h3>
+                <div class="flex items-center space-x-4">
+                    <img src="https://placehold.co/100x100/9BB8DD/333333?text=Instructor" alt="Instructor Profile Picture" class="rounded-full w-24 h-24 object-cover border-4 border-blue-300">
+                    <div>
+                        <p class="text-xl font-semibold text-gray-800">Dr. Anya Sharma</p>
+                        <p class="text-gray-600">Lead Data Scientist at InnovateTech, 10+ years experience</p>
+                        <p class="text-gray-600 text-sm mt-1">"I'm passionate about making data accessible to everyone. Join me to unravel the mysteries of data!"</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                <p class="text-3xl font-bold text-gray-900 mb-4">Ready to Transform Your Career?</p>
+                <p class="text-2xl text-green-700 font-bold mb-6">Course Fee: <span class="text-4xl">$999</span> (Limited-time Offer!)</p>
+                <a href="register.html" class="cta-button bg-green-600 hover:bg-green-700 text-white px-10 py-5 rounded-full text-2xl font-bold shadow-lg transition-colors duration-300 transform hover:scale-105">
+                    Enroll Now!
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section (consistent across pages) -->
+    <footer class="bg-gray-800 text-white py-6 mt-8">
+        <div class="max-w-6xl mx-auto px-4 text-center text-gray-400 text-sm">
+            <p>&copy; 2025 LearnFast. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="about.html" class="hover:underline">Contact Us</a> |
+                <a href="#" class="hover:underline">Privacy Policy</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
